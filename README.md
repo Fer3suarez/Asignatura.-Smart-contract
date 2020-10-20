@@ -1,6 +1,6 @@
-# Práctica 1. Blockchain. Desarrollo de aplicaciones
+# Asignatura Blockchain. Desarrollo de aplicaciones
 
-## Crear un contrato inteligente llamado Asignatura para representar una asignatura de la carrera.
+##  Práctica 1. Crear un contrato inteligente llamado Asignatura para representar una asignatura de la carrera.
 
 El profesor de la asignatura será el usuario que despliega el contrato.
 
