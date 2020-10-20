@@ -61,7 +61,7 @@ contract Asignatura {
 		return evaluaciones.length-1;
 	}
 
-	function automatricula(string memory _nombre, string memory _email) noMatriculados public {
+	function automatricula(string memory _nombre, string memory _email) noMatriculados noVacio public {
 		Alumno memory alumno = Alumno(_nombre, _email);
 		datosAlumno[msg.sender] = alumno;
 		matriculas.push(msg.sender);
@@ -89,6 +89,7 @@ contract Asignatura {
 	}
 
 	/*-----------------------------MODIFIERS------------------------------*/
+	
 	modifier soloProfesor() {
         require(msg.sender == profesor, "Solo permitido al profesor");
         _;
@@ -105,6 +106,12 @@ contract Asignatura {
         string memory _nombre = datosAlumno[msg.sender].nombre;
         bytes memory b = bytes(_nombre);
         require(b.length == 0, "Solo permitido a alumnos no matriculados");
+        _;
+    }
+
+    modifier noVacio() {
+    	bytes memory b = bytes(_nombre);
+        require(b.length != 0, "El nombre no puede ser vacio");
         _;
     }
 
