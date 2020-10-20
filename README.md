@@ -41,3 +41,6 @@ Crear un modificador, llamado soloProfesor, para que las funciones creaEvaluacio
 Crear un modificador, llamado soloMatriculados, para que las funciones quienSoy y miNota solo pueda ejecutarlas un alumno matriculado.
 
 Crear un modificador, llamado noMatriculados, para que la función automatricula solo pueda ejecutarla un alumno que no se ha matriculado aun.
+
+> [Solución](https://github.com/Fer3suarez/BCDA/blob/main/asignatura.sol)
+
