@@ -73,5 +73,31 @@ Cree las funciones App.handleDecr() y App.handleReset() para manejar las pulsaci
 
 Use el servidor serve para servir la app desarrollada.
 
-> [Solución](https://github.com/Fer3suarez/BCDA/blob/main/asignatura.sol)
+> [Solución](https://github.com/Fer3suarez/BCDA/tree/main/Pr%C3%A1ctica%202.%20Contador%20con%20decremento%20y%20reset)
 
+> Pasos para ejecutar el contador con Truffle, Ganache y Metamask:
+Instalar truffle
+```
+npm install truffle 
+```
+Instalar ganache
+```
+Descargar ganache para Windows(https://www.trufflesuite.com/ganache)
+```
+Instalar los paquetes web3 y truffle-contract
+```
+npm install web3 truffle-contract
+```
+Compilar el contrato Contador.sol
+```
+npx truffle compile --all
+```
+Migrar el contrato compilado
+```
+npx truffle migrate --compile-all --reset
+```
+Lanzar servidor web serve
+```
+npx serve -S dapp
+```
+Abrir navegador Chrome con Metamask instalado e importar una cuenta de Ganache
