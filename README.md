@@ -75,7 +75,7 @@ Use el servidor serve para servir la app desarrollada.
 
 > [Solución](https://github.com/Fer3suarez/BCDA/tree/main/Pr%C3%A1ctica%202.%20Contador%20con%20decremento%20y%20reset)
 
-> Pasos para ejecutar el contador con Truffle, Ganache y Metamask:
+#### Pasos para ejecutar el contador con Truffle, Ganache y Metamask:
 Instalar truffle
 ```
 npm install truffle 
