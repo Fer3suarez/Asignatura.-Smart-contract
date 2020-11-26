@@ -150,7 +150,7 @@ App = {
             }
             console.log("Cuenta =", account);
 
-            // Ejecutar incr como una transacción desde la cuenta account.
+            // Ejecutar decr como una transacción desde la cuenta account.
             await App.contador.decr({from: account, gas: 200000});
         } catch(error) {
             console.log(error.message || error);
@@ -173,7 +173,7 @@ App = {
             }
             console.log("Cuenta =", account);
 
-            // Ejecutar incr como una transacción desde la cuenta account.
+            // Ejecutar reset como una transacción desde la cuenta account.
             await App.contador.reset({from: account, gas: 200000});
         } catch(error) {
             console.log(error.message || error);
