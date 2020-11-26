@@ -55,7 +55,7 @@ contract('Usamos un Contador:', accounts => {
       c2 = value;
 
       const decr = c2.sub(c1);
-      assert.equal(decr.toNumber(), -1, "El decremento del valor no es 255.");
+      assert.equal(decr.toNumber(), -1, "El decremento del valor no es -1.");
     });
   });
 
@@ -83,7 +83,7 @@ contract('Usamos un Contador:', accounts => {
     let c2 = await contador.valor.call();
  
     const decr = c2.sub(c1);
-    assert.equal(decr.toNumber(), -4, "El decremento del valor no es 252.");
+    assert.equal(decr.toNumber(), -4, "El decremento del valor no es -4.");
   });
 
 });
