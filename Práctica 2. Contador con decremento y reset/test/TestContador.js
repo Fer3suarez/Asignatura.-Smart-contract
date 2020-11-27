@@ -59,6 +59,19 @@ contract('Usamos un Contador:', accounts => {
     });
   });
 
+  it("reseteo del contador", async () => {
+
+    let c1 = await contador.valor.call();
+    await contador.incr(); 
+    await contador.incr(); 
+    await contador.incr(); 
+    await contador.incr();
+    await contador.reset(); 
+
+    const value = await contador.valor.call();
+    assert.equal(value.toNumber(), 0, "El valor no es 0.");
+  });
+
 
   it("incrementa en cuatro el contador", async () => {
 

@@ -36,6 +36,24 @@ contract TestContador {
         Assert.equal(res, expected, "El contador deberia haberse incrementado en 4.");
     }
 
+    // Testing the reset() function
+    function testReset() public {
+
+        uint8 c1 =  contador.valor();
+
+        contador.incr();
+        contador.incr();
+        contador.incr();
+        contador.incr();
+        contador.reset();
+
+        c1 = contador.valor();
+        
+        uint expected = 0;
+
+        Assert.equal(c1, expected, "El contador deberia haberse reseteado a 0.");
+    }
+
     // Testing the decr() function
     function testDecr() public {
 
