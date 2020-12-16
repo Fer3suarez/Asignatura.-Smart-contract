@@ -82,7 +82,7 @@ npm install truffle
 ```
 Instalar ganache
 ```
-Descargar ganache para Windows (https://www.trufflesuite.com/ganache).
+Descargar ganache para Windows https://www.trufflesuite.com/ganach
 ```
 Instalar los paquetes web3 y truffle-contract
 ```
