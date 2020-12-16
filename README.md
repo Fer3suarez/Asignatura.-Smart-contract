@@ -82,7 +82,7 @@ npm install truffle
 ```
 Instalar ganache
 ```
-Descargar ganache para Windows [aquí](https://www.trufflesuite.com/ganache).
+Descargar ganache para Windows (https://www.trufflesuite.com/ganache).
 ```
 Instalar los paquetes web3 y truffle-contract
 ```
@@ -92,7 +92,7 @@ Compilar el contrato Contador.sol
 ```
 npx truffle compile --all
 ```
-Migrar el contrato compilado
+Realizar las migraciones
 ```
 npx truffle migrate --compile-all --reset
 ```
