@@ -19,59 +19,59 @@ Permitir obtener un listado con las notas de todos los alumnos en una determinad
 
 Deben implementarse por lo menos dos funcionalidades. 
 
-> [Solución](https://github.com/Fer3suarez/BCDA/tree/main/P3_Asignatura_Drizzle)
+> [Solución](https://github.com/Fer3suarez/BCDA/tree/master/P3_Asignatura_Drizzle)
 
-###Ejecución de la aplicación
+### Ejecución de la aplicación
 
-1. Clonar el repositorio
+Clonar el repositorio
 
 ```
 git clone htpps://github.com/Fer3suarez/BCDA
 ```
 
-2. Moverse al directorio del proyecto
+Moverse al directorio del proyecto
 
 ```
 cd P3_Asignatura_Drizzle
 ```
 
-3. Instalar las dependencias del proyecto
+Instalar las dependencias del proyecto
 
 ```
 npm install
 ```
 
-4. Abrir Ganache y crear un workspace apuntando al archivo truffle-config del proyecto
+Abrir Ganache y crear un workspace apuntando al archivo truffle-config del proyecto
 
 
-5. En el navegador, importar las cuentas de Ganache a Metamask
+En el navegador, importar las cuentas de Ganache a Metamask
 
 
-6. Compilar y migrar los contraros inteligentes
+Compilar y migrar los contraros inteligentes
 
 ```
 npx truffle migrate --compile-all --reset
 ```
 
-7. Ejecutar el script rellenar.js para crear alumnos iniciales y un profesor
+Ejecutar el script rellenar.js para crear alumnos iniciales y un profesor
 
 ```
 npx truffle exec .\scripts\rellenar.js
 ```
 
-8. Moverse a la carpeta dapp
+Moverse a la carpeta dapp
 
 ```
 cd dapp
 ```
 
-9. Instalar las dependencias de la aplicación descentralizada
+Instalar las dependencias de la aplicación descentralizada
 
 ```
 npm install
 ```
 
-10. Arrancar la aplicación
+Arrancar la aplicación
 
 ```
 npm start
