@@ -1,5 +1,6 @@
 
 import EvaluacionRow from "./EvaluacionRow";
+import Evaluar from "./Evaluar";
 
 const EvaluacionesBody = (props) => {
     const {drizzle, drizzleState, evaluacionesLength} = props;
@@ -10,6 +11,7 @@ const EvaluacionesBody = (props) => {
                                  evaluacionIndex={i}/>);
     }
     return <tbody>{rows}</tbody>;
+
 };
 
 export default EvaluacionesBody;

@@ -1,5 +1,7 @@
 import {newContextComponents} from "@drizzle/react-components";
 
+import Evaluar from "./Evaluar";
+
 const {ContractData} = newContextComponents;
 
 const EvaluacionRow = (props) => {
