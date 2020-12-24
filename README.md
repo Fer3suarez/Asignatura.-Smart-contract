@@ -42,7 +42,7 @@ Crear un modificador, llamado soloMatriculados, para que las funciones quienSoy 
 
 Crear un modificador, llamado noMatriculados, para que la función automatricula solo pueda ejecutarla un alumno que no se ha matriculado aun.
 
-> [Solución](https://github.com/Fer3suarez/BCDA/blob/main/asignatura.sol)
+> [Solución](https://github.com/Fer3suarez/BCDA/blob/master/asignatura.sol)
 
 
 ##  Practica 2 - Contador con Decremento y Reset
@@ -73,7 +73,7 @@ Cree las funciones App.handleDecr() y App.handleReset() para manejar las pulsaci
 
 Use el servidor serve para servir la app desarrollada.
 
-> [Solución](https://github.com/Fer3suarez/BCDA/tree/main/Pr%C3%A1ctica%202.%20Contador%20con%20decremento%20y%20reset)
+> [Solución](https://github.com/Fer3suarez/BCDA/tree/master/Pr%C3%A1ctica%202.%20Contador%20con%20decremento%20y%20reset)
 
 #### Pasos para ejecutar el contador con Truffle, Ganache y Metamask:
 Instalar truffle
@@ -123,4 +123,60 @@ Permitir obtener un listado con las notas de todos los alumnos en una determinad
 
 Deben implementarse por lo menos dos funcionalidades. 
 
-> [Solución](https://github.com/Fer3suarez/BCDA/tree/main/P3_Asignatura_Drizzle)
+> [Solución](https://github.com/Fer3suarez/BCDA/tree/master/P3_Asignatura_Drizzle)
+
+###Ejecución de la aplicación
+
+1. Clonar el repositorio
+
+```
+git clone htpps://github.com/Fer3suarez/BCDA
+```
+
+2. Moverse al directorio del proyecto
+
+```
+cd P3_Asignatura_Drizzle
+```
+
+3. Instalar las dependencias del proyecto
+
+```
+npm install
+```
+
+4. Abrir Ganache y crear un workspace apuntando al archivo truffle-config del proyecto
+
+
+5. En el navegador, importar las cuentas de Ganache a Metamask
+
+
+6. Compilar y migrar los contraros inteligentes
+
+```
+npx truffle migrate --compile-all --reset
+```
+
+7. Ejecutar el script rellenar.js para crear alumnos iniciales y un profesor
+
+```
+npx truffle exec .\scripts\rellenar.js
+```
+
+8. Moverse a la carpeta dapp
+
+```
+cd dapp
+```
+
+9. Instalar las dependencias de la aplicación descentralizada
+
+```
+npm install
+```
+
+10. Arrancar la aplicación
+
+```
+npm start
+```
