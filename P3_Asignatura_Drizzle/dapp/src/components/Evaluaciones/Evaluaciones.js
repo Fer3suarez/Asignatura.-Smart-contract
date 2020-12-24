@@ -3,7 +3,6 @@ import {newContextComponents} from "@drizzle/react-components";
 import EvaluacionesHead from "./EvaluacionesHead";
 import EvaluacionesBody from "./EvaluacionesBody";
 
-//import EvaluacionesSinComponentes from "./EvaluacionesSinComponentes";
 
 const {ContractData} = newContextComponents;
 
@@ -26,7 +25,6 @@ const Evaluaciones = (props) => (
             )}
         />
 
-        {/*<EvaluacionesSinComponentes drizzle={props.drizzle} drizzleState={props.drizzleState} />*/}
     </section>
 );
 

@@ -1,5 +1,6 @@
 import MisDatos from "./MisDatos";
 import MisNotas from "./MisNotas";
+import Matricular from "./Matricular";
 
 const MisCosas = (props) => {
     const {drizzle, drizzleState} = props;
@@ -12,6 +13,9 @@ const MisCosas = (props) => {
 
         <MisNotas drizzle={drizzle}
                   drizzleState={drizzleState}/>
+
+        <Matricular drizzle={props.drizzle}
+                   drizzleState={props.drizzleState} />
     </section>;
 }
 
