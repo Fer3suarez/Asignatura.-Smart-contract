@@ -28,6 +28,7 @@ const Evaluaciones = (props) => (
 
         <Evaluar drizzle={props.drizzle}
                  drizzleState={props.drizzleState} />
+        
 
     </section>
 );

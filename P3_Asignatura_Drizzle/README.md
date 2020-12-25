@@ -11,7 +11,7 @@ Se pide ampliar la dapp proporcionada con las siguientes nuevas funcionalidades:
 ### Funcionalidad 1 (30%)
 Crear un botón para que un alumno se pueda matricular.  La dirección seleccionada en Metamask identifica al alumno que se está matriculando.
 
-### Funcionalidad 2 (40%)
+### Funcionalidad 2 (30%)
 Crear un formulario para que el profesor cree nuevas evaluaciones.
 
 ### Funcionalidad 3 (40%)
