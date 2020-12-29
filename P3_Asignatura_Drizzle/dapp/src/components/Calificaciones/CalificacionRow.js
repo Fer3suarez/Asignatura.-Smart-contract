@@ -8,7 +8,6 @@ const CalificacionRow = (props) => {
     let cells = [];
 
     for (let ei = 0; ei < evaluacionesLength; ei++) {
-
         cells.push(
             <ContractData
                 drizzle={drizzle}
@@ -22,6 +21,7 @@ const CalificacionRow = (props) => {
                         {nota.tipo === "1" ? (nota.calificacion / 10).toFixed(1) : ""}
                         {nota.tipo === "2" ? (nota.calificacion / 10).toFixed(1) + "(M.H.)" : ""}
                     </td>
+                    
                 }
             />)
     }
@@ -43,6 +43,7 @@ const CalificacionRow = (props) => {
             {cells}
         </tr>
     );
+
 };
 
 export default CalificacionRow;

@@ -9,7 +9,7 @@ const MisCosas = (props) => {
 
         <MisDatos drizzle={drizzle}
                   drizzleState={drizzleState}/>
-
+                  
         <MisNotas drizzle={drizzle}
                   drizzleState={drizzleState}/>
 
@@ -17,4 +17,5 @@ const MisCosas = (props) => {
 }
 
 export default MisCosas;
+
 

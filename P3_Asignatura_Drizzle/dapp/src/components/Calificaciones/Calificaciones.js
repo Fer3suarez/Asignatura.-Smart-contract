@@ -32,21 +32,7 @@ const CalificacionesV1 = ({drizzle, drizzleState}) => <article className="AppMis
     />
 
     <Calificar drizzle={drizzle}
-               drizzleState={drizzleState} />
-
-    <h3>Prueba</h3>
-
-    <ContractData drizzle={drizzle}
-                  drizzleState={drizzleState}
-                  contract={"Asignatura"}
-                  method={"profesor"}
-                  render={addr => {
-                      if (addr === drizzleState.accounts[0]) {
-                        return <p>Prueba</p>
-                      }
-                      return <p>Solo el profesor puede ver las notas de todos los alumnos de una determinada evaluacion</p>
-                  }}
-    />
+               drizzleState={drizzleState} />    
         
 </article>
 
