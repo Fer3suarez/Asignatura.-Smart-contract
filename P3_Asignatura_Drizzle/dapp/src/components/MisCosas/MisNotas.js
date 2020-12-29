@@ -24,12 +24,9 @@ const MisNotas = (props) => (
                             </table>}
                         />
                   }}
-        />
-        
+        />        
     </section>
 );
-
-
 
 
 const MisNotasHead = () => {
@@ -78,12 +75,11 @@ const MisNotasBody = (props) => {
                 contract={"Asignatura"}
                 method={"miNota"}
                 methodArgs={[ei]}
-                render={nota =><tr>
-                    <td key={"miNotaIndex-" + ei}>
+                render={nota => 
+                    <tr>
                         {nota && nota.tipo === "0" ? "0" : ""}
-                        {nota && nota.tipo === "1" || nota.tipo === "2" ? (nota.calificacion / 10).toFixed(1) : ""}
-                    </td>
-                </tr>}
+                        {nota.tipo === "1" || nota.tipo === "0" ? (nota.calificacion) : ""}
+                    </tr>}
             />);
         puntos.push(
             <ContractData
@@ -99,31 +95,33 @@ const MisNotasBody = (props) => {
                         contract={"Asignatura"}
                         method={"evaluaciones"}
                         methodArgs={[ei]}
-                        render={ev => ev.puntos}
+                        render={ev => {(ev.puntos / 10).toFixed(1)}}
                     /></td>
                 </tr>}
             />);
     }
-    let ei = 0;
     rows.push(
         <tr>
             <td><strong>Nota final</strong></td>
             <td>
                 <strong>
-                    {miFuncion(notas, puntos)}
+                    {notaFinal(notas, puntos)}
                 </strong>
             </td>
         </tr>
     );
 
-    function miFuncion(notas, puntos) {
+    function notaFinal(notas, puntos) {
         let final;
         for(let i = 0; i<notas.length;i++){
             for(let j = 0; j<puntos.length;j++){
-                final = (notas[i]*puntos[i])/notas.length;
+                final += ((notas[i]*puntos[i])/notas.length);
             }
         }
-        return final;
+        console.log("Notas: " + notas);
+        console.log("Puntos: " + puntos);
+        console.log("Final: " + final);
+        return (final / 10).toFixed(1);
     }
 
     return <tbody>{rows}</tbody>;
