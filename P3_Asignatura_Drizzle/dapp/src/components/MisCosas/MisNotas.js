@@ -53,7 +53,7 @@ const MisNotasBody = (props) => {
                 method={"miNota"}
                 methodArgs={[ei]}
                 render={nota =><tr>
-                    <td><ContractData key={"EVA-" + ei}
+                    <td><ContractData
                         drizzle={drizzle}
                         drizzleState={drizzleState}
                         contract={"Asignatura"}
@@ -61,7 +61,7 @@ const MisNotasBody = (props) => {
                         methodArgs={[ei]}
                         render={ev => ev.nombre}
                     /></td>
-                    <td key={"miNotaIndex-" + ei}>
+                    <td>
                         {nota && nota.tipo === "0" ? "N.P." : ""}
                         {nota && nota.tipo === "1" ? (nota.calificacion / 10).toFixed(1) : ""}
                         {nota && nota.tipo === "2" ? (nota.calificacion / 10).toFixed(1) + "(M.H.)" : ""}
@@ -78,26 +78,20 @@ const MisNotasBody = (props) => {
                 render={nota => 
                     <tr>
                         {nota && nota.tipo === "0" ? "0" : ""}
-                        {nota.tipo === "1" || nota.tipo === "0" ? (nota.calificacion) : ""}
+                        {nota.tipo === "1" || nota.tipo === "2" ? (nota.calificacion) : ""}
                     </tr>}
             />);
         puntos.push(
             <ContractData
-                drizzle={drizzle}
-                drizzleState={drizzleState}
-                contract={"Asignatura"}
-                method={"miNota"}
-                methodArgs={[ei]}
-                render={nota =><tr>
-                    <td><ContractData key={"EVA-" + ei}
-                        drizzle={drizzle}
-                        drizzleState={drizzleState}
-                        contract={"Asignatura"}
-                        method={"evaluaciones"}
-                        methodArgs={[ei]}
-                        render={ev => {(ev.puntos / 10).toFixed(1)}}
-                    /></td>
-                </tr>}
+                    drizzle={drizzle}
+                    drizzleState={drizzleState}
+                    contract={"Asignatura"}
+                    method={"evaluaciones"}
+                    methodArgs={[ei]}
+                    render={ev => 
+                        <tr>
+                            {(ev.puntos / 10).toFixed(1)}
+                        </tr>}
             />);
     }
     rows.push(
@@ -113,15 +107,13 @@ const MisNotasBody = (props) => {
 
     function notaFinal(notas, puntos) {
         let final;
+        let num_puntos;
         for(let i = 0; i<notas.length;i++){
-            for(let j = 0; j<puntos.length;j++){
-                final += ((notas[i]*puntos[i])/notas.length);
-            }
+            final += ((notas[i]*puntos[i]));
+            num_puntos += puntos[i];
         }
-        console.log("Notas: " + notas);
-        console.log("Puntos: " + puntos);
-        console.log("Final: " + final);
-        return (final / 10).toFixed(1);
+        console.log(((final / 10).toFixed(1))/num_puntos);
+        return ((final / 10).toFixed(1))/num_puntos;
     }
 
     return <tbody>{rows}</tbody>;

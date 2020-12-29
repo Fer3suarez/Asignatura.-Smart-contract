@@ -5,7 +5,7 @@ import CalificacionesBody from "./CalificacionesBody";
 import Calificar from "./Calificar";
 
 
-const {ContractData, ContractForm} = newContextComponents;
+const {ContractData} = newContextComponents;
 
 const Calificaciones = ({drizzle, drizzleState}) => <CalificacionesV1  drizzle={drizzle} drizzleState={drizzleState} />
 

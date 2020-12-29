@@ -1,7 +1,5 @@
 import {newContextComponents} from "@drizzle/react-components";
 
-import Evaluar from "./Evaluar";
-
 const {ContractData} = newContextComponents;
 
 const EvaluacionRow = (props) => {
@@ -13,7 +11,7 @@ const EvaluacionRow = (props) => {
         method={"evaluaciones"}
         methodArgs={[evaluacionIndex]}
         render={ev =>
-            <tr key={"EVA-" + evaluacionIndex}>
+            <tr>
                 <th>E<sub>{evaluacionIndex}</sub></th>
                 <td>{ev.nombre}</td>
                 <td>{ev.fecha ? (new Date(1000 * ev.fecha))

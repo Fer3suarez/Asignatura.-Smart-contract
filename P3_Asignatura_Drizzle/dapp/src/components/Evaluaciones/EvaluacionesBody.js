@@ -1,6 +1,4 @@
-
 import EvaluacionRow from "./EvaluacionRow";
-import Evaluar from "./Evaluar";
 
 const EvaluacionesBody = (props) => {
     const {drizzle, drizzleState, evaluacionesLength} = props;

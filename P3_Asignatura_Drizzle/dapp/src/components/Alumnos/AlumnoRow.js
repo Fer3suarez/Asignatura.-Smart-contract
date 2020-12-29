@@ -4,7 +4,7 @@ const {ContractData} = newContextComponents;
 
 const AlumnoRow = (props) => {
     const {drizzle, drizzleState, alumnoIndex, alumnoAddr} = props;
-    return <tr key={"ALU-" + alumnoIndex}>
+    return <tr>
         <th>A<sub>{alumnoIndex}</sub></th>
 
         <ContractData

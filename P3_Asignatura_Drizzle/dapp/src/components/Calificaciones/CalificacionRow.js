@@ -39,7 +39,6 @@ const CalificacionRow = (props) => {
                                   {datos.nombre}
                               </>}
             /></td>
-
             {cells}
         </tr>
     );
