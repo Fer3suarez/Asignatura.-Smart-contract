@@ -15,7 +15,10 @@ const MatricularV1 = ({drizzle, drizzleState}) => <article className="AppMisDato
                                     contract={"Asignatura"} method={"quienSoy"} methodArgs={[]}
                                     render={datos => {
                                         if (datos) {
-                                          return <p>Ya estoy matriculado</p>
+                                          return <div>
+                                                    <p>Ya estoy matriculado.</p>
+                                                    <p> Soy <strong>{datos._nombre}</strong> con email <strong>{datos._email}</strong></p>
+                                                 </div>
                                         }
                                         return <ContractForm drizzle={drizzle} drizzleState={drizzleState}
                                                              contract="Asignatura" method="automatricula"
