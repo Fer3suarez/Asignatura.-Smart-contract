@@ -17,8 +17,10 @@ const CalificacionesBody = (props) => {
                 render={addr => <CalificacionRow
                     drizzle={drizzle}
                     drizzleState={drizzleState}
+                    evaluacionIndex={1}
                     alumnoIndex={i}
                     alumnoAddr={addr}
+                    matriculasLength={matriculasLength}
                     evaluacionesLength={evaluacionesLength}/>}
             />);
     }
