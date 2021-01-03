@@ -28,7 +28,6 @@ const CalificacionRow = (props) => {
                                 render={nota => {
                                     notas.push((nota.calificacion/10));
                                     puntos.push((ev.puntos / 10));
-                                    console.log("Los puntos son: "+ puntos);
                                     return <td key={"p2-" + alumnoIndex + "-" + ei}>
                                         {nota.tipo === "0" ? "N.P." : ""}
                                         {nota.tipo === "1" ? (nota.calificacion / 10).toFixed(1) : ""}
@@ -39,7 +38,6 @@ const CalificacionRow = (props) => {
                         }}    
           />)
     }
-    console.log("ESTOY FUERA DEL FOR--------Los puntos son: "+ puntos);
 
     cells.push(
       <NotaFinal notas={notas} puntos={puntos}/>
