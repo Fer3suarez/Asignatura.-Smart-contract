@@ -5,6 +5,7 @@ import CalificacionesHead2 from "./CalificacionesHead2";
 import CalificacionesBody from "./CalificacionesBody";
 import CalificacionesBody2 from "./CalificacionesBody2";
 import Calificar from "./Calificar";
+import DetalleEvaluacion from "./DetalleEvaluacion";
 
 
 const {ContractData} = newContextComponents;
@@ -37,26 +38,28 @@ const CalificacionesV1 = ({drizzle, drizzleState}) => <article className="AppMis
                drizzleState={drizzleState} />    
 
 
-    <h3>Notas de una evaluacion</h3>
-
     <ContractData drizzle={drizzle}
-                  drizzleState={drizzleState}
-                  contract={"Asignatura"}
-                  method={"matriculasLength"}
-                  render={ml => <ContractData
-                      drizzle={drizzle}
                       drizzleState={drizzleState}
                       contract={"Asignatura"}
-                      method={"evaluacionesLength"}
-                      render={el => <table>
-                          <CalificacionesHead2 evaluacionesLength={el}/>
-                          <CalificacionesBody2 drizzle={drizzle}
-                                              drizzleState={drizzleState}
-                                              matriculasLength={ml}
-                                              evaluacionesLength={el}/>
-                      </table>}
-                  />}
-    />
+                      method={"matriculasLength"}
+                      render={ml => 
+                        <ContractData
+                            drizzle={drizzle}
+                            drizzleState={drizzleState}
+                            contract={"Asignatura"}
+                            method={"evaluacionesLength"}
+                            render={el => 
+                                
+                                <DetalleEvaluacion 
+                                            drizzle={drizzle}
+                                            drizzleState={drizzleState}
+                                            evaluacionesLength={el}
+                                            matriculasLength={ml}/>
+                                
+                            }
+                        />
+                        }
+        />
         
 </article>
 

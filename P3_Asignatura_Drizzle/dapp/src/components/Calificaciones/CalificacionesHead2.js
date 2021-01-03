@@ -1,4 +1,4 @@
-const CalificacionesHead2 = ({evaluacionesLength}) => {
+const CalificacionesHead2 = ({evaluacion}) => {
 
     let thead = [];
 
@@ -6,7 +6,7 @@ const CalificacionesHead2 = ({evaluacionesLength}) => {
 
     thead.push(<th key={"chn"}>Nombre</th>);
 
-    thead.push(<th>Nota</th>);
+    thead.push(<th key={"chev-" + evaluacion}>E<sub>{evaluacion}</sub></th>);
 
     return <thead>{thead}</thead>;
 };

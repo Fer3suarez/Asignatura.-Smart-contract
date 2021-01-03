@@ -4,7 +4,7 @@ import CalificacionRow2 from "./CalificacionRow2";
 const {ContractData} = newContextComponents;
 
 const CalificacionesBody2 = (props) => {
-    const {drizzle, drizzleState, matriculasLength, evaluacionesLength} = props;
+    const {drizzle, drizzleState, matriculasLength, evaluacion} = props;
     let rows = [];
     for (let i = 0; i < matriculasLength; i++) {
         rows.push(
@@ -17,11 +17,9 @@ const CalificacionesBody2 = (props) => {
                 render={addr => <CalificacionRow2
                     drizzle={drizzle}
                     drizzleState={drizzleState}
-                    evaluacionIndex={1}
                     alumnoIndex={i}
                     alumnoAddr={addr}
-                    matriculasLength={matriculasLength}
-                    evaluacionesLength={evaluacionesLength}/>}
+                    evaluacion={evaluacion}/>}
             />);
     }
     return <tbody>{rows}</tbody>;

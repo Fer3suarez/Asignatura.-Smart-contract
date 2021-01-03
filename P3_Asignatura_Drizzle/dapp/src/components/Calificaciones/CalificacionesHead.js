@@ -10,6 +10,8 @@ const CalificacionesHead = ({evaluacionesLength}) => {
         thead.push(<th key={"chev-" + i}>E<sub>{i}</sub></th>);
     }
 
+    thead.push(<th>Nota final</th>);
+
     return <thead>{thead}</thead>;
 };
 
