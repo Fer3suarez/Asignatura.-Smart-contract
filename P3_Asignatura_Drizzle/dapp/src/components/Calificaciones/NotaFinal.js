@@ -1,6 +1,7 @@
-const NotaFinal = ({notas}) => {
+const NotaFinal = ({notas}, {puntos}) => {
 
     console.log(notas)
+    //console.log("Puntos: " + puntos);
     // TODO: Por alguna razon que desconozco, el array notas viene con cada nota duplicada
     let notas_filtradas = notas.filter(function(element, index, array) {
 		return (index % 2 !== 0);

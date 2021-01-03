@@ -1,4 +1,5 @@
 import {newContextComponents} from "@drizzle/react-components";
+
 const {ContractData} = newContextComponents;
 
 const MisNotas = (props) => (
@@ -67,6 +68,7 @@ const MisNotasBody = (props) => {
                 </tr>}
             />);
     }
+
     return <tbody>{rows}</tbody>;
 };
 
